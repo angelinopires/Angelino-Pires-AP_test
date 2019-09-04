@@ -1,0 +1,33 @@
+<div *ngIf="isVisible"
+     class="modal-backdrop fade show"></div>
+<div *ngIf="isVisible"
+     role="dialog"
+     tabindex="-1"
+     class="modal fade show d-block"
+     data-backdrop="static"
+     data-keyboard="false">
+  <div role="document"
+       class="modal-dialog modal-md">
+    <div #modalContent
+         class="modal-content">
+      <div class="modal--header"
+           *ngIf="hasHeader">
+        <!-- <h5 class="modal-title text-center">Modal title</h5> -->
+        <ng-content select="[modal-header]"></ng-content>
+        <button *ngIf="hasClose"
+                type="button"
+                class="close"
+                (click)="close.emit()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal--body">
+        <ng-content select="[modal-body]"></ng-content>
+      </div>
+      <div class="modal--footer"
+           *ngIf="hasFooter">
+        <ng-content select="[modal-footer]"></ng-content>
+      </div>
+    </div>
+  </div>
+</div>
