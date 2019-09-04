@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="550px" height="550px" viewBox="0 0 550 550" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Patentes/Sem Patente</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="88.2461637%" id="linearGradient-1">
+            <stop stop-color="#2E4E65" offset="0%"></stop>
+            <stop stop-color="#4E8FB3" offset="41.3683833%"></stop>
+            <stop stop-color="#6FAED8" offset="56.6301448%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="49.7900188%" y1="-7.10294118%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#D4F1FF" offset="0%"></stop>
+            <stop stop-color="#8BD1FA" offset="40.3517883%"></stop>
+            <stop stop-color="#8FD0FA" offset="49.8425542%"></stop>
+            <stop stop-color="#3A6281" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50.8654952%" y1="91.544143%" x2="50%" y2="-4.92644521%" id="linearGradient-3">
+            <stop stop-color="#D4F1FF" offset="0%"></stop>
+            <stop stop-color="#6BBEEE" offset="41.3683833%"></stop>
+            <stop stop-color="#8FD0FA" offset="49.8425542%"></stop>
+            <stop stop-color="#3A6281" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-4" points="275.030398 83.5838887 459.060797 189.833889 459.060797 402.333889 275.030398 508.583889 91 402.333889 91 189.833889"></polygon>
+    </defs>
+    <g id="Patentes/Sem-Patente" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Polygon" transform="translate(275.030398, 275.791944) rotate(-180.000000) translate(-275.030398, -275.791944) ">
+            <use stroke="url(#linearGradient-1)" stroke-width="10" xlink:href="#path-4"></use>
+            <path stroke="url(#linearGradient-2)" stroke-width="32" d="M275.030398,102.059097 L107,199.071493 L107,393.096284 L275.030398,490.10868 L443.060797,393.096284 L443.060797,199.071493 L275.030398,102.059097 Z" stroke-linejoin="square"></path>
+            <path stroke="url(#linearGradient-3)" stroke-width="20" d="M275.030398,95.1308941 L101,195.607391 L101,396.560386 L275.030398,497.036883 L449.060797,396.560386 L449.060797,195.607391 L275.030398,95.1308941 Z" stroke-linejoin="square"></path>
+        </g>
+    </g>
+</svg>

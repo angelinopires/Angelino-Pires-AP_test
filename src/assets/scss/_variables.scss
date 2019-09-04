@@ -1,8 +1,32 @@
 // Fonts
-$font-default: "Montserrat", sans-serif;
+$font-title: "Teko", sans-serif;
+$font-text: "Poppins" sans-serif;
 
-// Text Colors
-$text-color: #333333;
+// Main Colors
+$white: #ffffff;
+$blue-summer-sky: #2c97de;
+$yellow-old-gold: #ddbc39;
+$green-citrus: #95b200;
+$green-darker: #92aa00;
+$red-alizarin: #fc3537;
+$red-cinnabar: #eb2f2f;
+$purple: #A58BFF;
+
+// Functional colors
+$text-color: $white;
+
+$bg-header: #272940;
+$bg-body: #27293c;
+$bg-footer: #222538;
+
+$color-success: $green-darker;
+$color-warning: $yellow-old-gold;
+$color-danger: $red-alizarin;
+$color-cta: $green-citrus;
+
+$id-color: #7c7da3;
+$download-text-color: #b6b8c6;
+$marker-color: #6ea1e7;
 
 // Size variables
 $screen-mobile: 576px;
