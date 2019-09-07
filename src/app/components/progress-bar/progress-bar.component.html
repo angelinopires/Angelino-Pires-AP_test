@@ -1,0 +1,26 @@
+<ng-container *ngIf="hasLabel">
+	<p class="progress-bar__text progress-bar__text--occasional">
+		Casual
+		<app-pin [class]=" 'progress-bar__pin' "></app-pin>
+	</p>
+	<p class="progress-bar__text progress-bar__text--competitive ">
+		Competitivo
+		<app-pin [class]=" 'progress-bar__pin' "></app-pin>
+	</p>
+</ng-container>
+
+<progress class="progress-bar"
+					max="100"
+					value="50">
+</progress>
+
+<ng-container *ngIf="hasLabel">
+	<p class="progress-bar__text progress-bar__text--amateur">
+		Amador
+		<app-pin [class]=" 'progress-bar__pin' "></app-pin>
+	</p>
+	<p class="progress-bar__text progress-bar__text--professional">
+		Pro
+		<app-pin [class]=" 'progress-bar__pin' "></app-pin>
+	</p>
+</ng-container>
