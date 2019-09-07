@@ -1,0 +1,57 @@
+.progress-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 14px;
+	width: 100%;
+
+	&__text {
+		position: absolute;
+		display: flex;
+		font-family: $font-title;
+		@include txt-styles(17, $white);
+
+		&--occasional,
+		&--amateur {
+			.progress-bar__pin {
+				transform: rotate(180deg);
+			}
+		}
+		&--occasional {
+			top: 0;
+			left: calc(10% - 1rem);
+		}
+		&--competitive {
+			bottom: 0;
+			left: calc(30% - 1rem);
+		}
+		&--amateur {
+			top: 0;
+			left: calc(60% - 1rem);
+		}
+		&--professional {
+			bottom: 0;
+			left: calc(90% - 1rem);
+		}
+	}
+	&__pin {
+    display: block;
+    width: 15px;
+    height: 18px;
+		margin-left: 4px;
+		background-image: url(assets/img/pin.svg);
+    background-repeat: no-repeat;
+		background-position: center;
+	}
+  &::-webkit-progress-bar {
+    padding: 3px 3px 4px 3px;
+    border-radius: 7px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.41);
+    background-color: $bg-body;
+  }
+  &::-webkit-progress-value {
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.05);
+    background-image: linear-gradient(to right, $purple-heart 0%, $light-sky-blue 100%);
+  }
+}

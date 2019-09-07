@@ -1,6 +1,6 @@
 // Fonts
 $font-title: "Teko", sans-serif;
-$font-text: "Poppins" sans-serif;
+$font-text: "Poppins", sans-serif;
 
 // Main Colors
 $white: #ffffff;
@@ -10,7 +10,7 @@ $green-citrus: #95b200;
 $green-darker: #92aa00;
 $red-alizarin: #fc3537;
 $red-cinnabar: #eb2f2f;
-$purple: #A58BFF;
+$purple: #a58bff;
 
 // Functional colors
 $text-color: $white;
@@ -24,9 +24,12 @@ $color-warning: $yellow-old-gold;
 $color-danger: $red-alizarin;
 $color-cta: $green-citrus;
 
+// Only used 1 time
 $id-color: #7c7da3;
 $download-text-color: #b6b8c6;
 $marker-color: #6ea1e7;
+$purple-heart: #5c3abd;
+$light-sky-blue: #77dbff;
 
 // Size variables
 $screen-mobile: 576px;

@@ -3,20 +3,16 @@
 		<header class="dashboard__header">
 			<div class="player__info">
 				<img class="player__image"
-						 src=""
-						 alt="Foto de perfil do jogador">
-				<h3 class="player__name">|M8|LinO</h3>
-				<h4 class="player__id">GC ID: 23191420</h4>
+						 src="assets/img/badfallen.jpg"
+						 alt="Foto do Bad Fallen AWP God">
+				<div class="player__name">
+					<h3 class="player__title">Bad Fallen is The Best Fallen IMO</h3>
+					<h4 class="player__title player__title--subtitle">GC ID: 23191420</h4>
+				</div>
 			</div>
 
 			<div class="player__expertise">
-				<p class="player__progress-text">Casual</p>
-				<p class="player__progress-text">Competitivo</p>
-				<progress class="progress-bar"
-									max="100"
-									value="50"></progress>
-				<p class="player__progress-text">Amador</p>
-				<p class="player__progress-text">Pro</p>
+				<app-progress-bar [hasLabel]=true></app-progress-bar>
 			</div>
 
 			<div class="player__badges">

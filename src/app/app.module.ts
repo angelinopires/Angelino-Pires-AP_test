@@ -8,19 +8,19 @@ import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
+import { PagesModule } from './pages/pages.module';
 
 registerLocaleData(localePt, 'pt');
 @NgModule({
 	declarations: [
 		AppComponent,
-		HomeComponent
 	],
 	imports: [
 		CoreModule,
 		BrowserModule,
 		AppRoutingModule,
 		RouterModule,
+		PagesModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]
