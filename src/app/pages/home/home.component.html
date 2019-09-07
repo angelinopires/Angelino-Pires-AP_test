@@ -1,9 +1,10 @@
 <main class="container">
 	<section class="dashboard">
 		<header class="dashboard__header">
-
 			<div class="player__info">
-				<img class="player__image" src="" alt="Foto de perfil do jogador">
+				<img class="player__image"
+						 src=""
+						 alt="Foto de perfil do jogador">
 				<h3 class="player__name">|M8|LinO</h3>
 				<h4 class="player__id">GC ID: 23191420</h4>
 			</div>
@@ -11,23 +12,105 @@
 			<div class="player__expertise">
 				<p class="player__progress-text">Casual</p>
 				<p class="player__progress-text">Competitivo</p>
-				<progress class="progress-bar" max="100" value="50"></progress>
+				<progress class="progress-bar"
+									max="100"
+									value="50"></progress>
 				<p class="player__progress-text">Amador</p>
 				<p class="player__progress-text">Pro</p>
 			</div>
 
 			<div class="player__badges">
-				<img src="game_position" alt="Trazer texto da posicao do player aqui" class="player__position">
-				<img src="featured_medal" alt="" class="player__medal">
-				<img src="patent" alt="Patente aqui" class="player__patent">
+				<img src="game_position"
+						 alt="Trazer texto da posicao do player aqui"
+						 class="player__position">
+				<img src="featured_medal"
+						 alt=""
+						 class="player__medal">
+				<img src="patent"
+						 alt="Patente aqui"
+						 class="player__patent">
 				<span class="player__level"></span>
-				<img src="is_subscriber" alt="" class="player__subscriber">
-				<!-- <img src="assets/img/beginner.svg" alt="Jogodar nível iniciante" class="player__level"> -->
+				<img src="is_subscriber"
+						 alt=""
+						 class="player__subscriber">
+			</div>
+		</header>
+
+		<div class="dashboard__body">
+			<div class="room room--4fun">
+				<div class="room__header">
+					<i class="room__icon"></i>
+					<h3 class="room__title">Titulo 4fun aqui</h3>
+				</div>
+
+				<div class="carrousel">Carrousel aqui</div>
 			</div>
 
+			<div class="room room--lobby">
+				<div class="room__header">
+					<i class="room__icon"></i>
+					<h3 class="room__title">Lobby</h3>
 
-		</header>
-		<div class="dashboard__body"></div>
-		<footer class="dashboard__footer"></footer>
+					<div class="room__matches">
+						<div class="match__info">
+							<strong class="match__amount">1234</strong>
+							<p class="match__label">Partidas</p>
+						</div>
+						<div class="match__info">
+							<strong class="match__amount">1234</strong>
+							<p class="match__label">Vitórias</p>
+						</div>
+						<div class="match__info">
+							<strong class="match__amount">1234</strong>
+							<p class="match__label">Derrotas</p>
+						</div>
+					</div>
+
+					<button class="btn">Ir para lobby</button>
+				</div>
+			</div>
+
+			<div class="room room--ranked">
+				<div class="room__header">
+					<i class="room__icon room__icon--ranked"></i>
+					<h3 class="room__title">Ranked</h3>
+				</div>
+
+				<div class="room__matches">
+					<div class="match__info">
+						<strong class="match__amount">1234</strong>
+						<p class="match__label">Partidas</p>
+					</div>
+					<div class="match__info">
+						<strong class="match__amount">1234</strong>
+						<p class="match__label">Vitórias</p>
+					</div>
+					<div class="match__info">
+						<strong class="match__amount">1234</strong>
+						<p class="match__label">Derrotas</p>
+					</div>
+				</div>
+
+				<button class="btn">Entrar na Fila</button>
+			</div>
+		</div>
+
+		<footer class="dashboard__footer">
+			<button class="btn">Download Gamers Club Anti-Cheat</button>
+
+			<div class="server">
+				<div class="server__info server__info--online">
+					<h5 class="server__title">9532</h5>
+					<p class="server__text">Jogadores</p>
+					<p class="server__text server__text--highlight">Online</p>
+				</div>
+
+				<div class="server__info server__info--banned">
+					<h5 class="server__title">123</h5>
+					<p class="server__text">Cheaters Banidos</p>
+					<p class="server__text server__text--highlight">Nos últimos 7 dias</p>
+				</div>
+			</div>
+		</footer>
 	</section>
 </main>
