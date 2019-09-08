@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PinComponent implements OnInit {
 	@Input() class: string = '';
+	@Input() isDisabled: boolean = false;
 
   constructor() { }
 

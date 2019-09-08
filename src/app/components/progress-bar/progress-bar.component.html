@@ -1,26 +1,34 @@
-<ng-container *ngIf="hasLabel">
-	<p class="progress-bar__text progress-bar__text--occasional">
-		Casual
-		<app-pin [class]=" 'progress-bar__pin' "></app-pin>
-	</p>
-	<p class="progress-bar__text progress-bar__text--competitive ">
-		Competitivo
-		<app-pin [class]=" 'progress-bar__pin' "></app-pin>
-	</p>
-</ng-container>
+<div class="player__expertise">
+	<ng-container *ngIf="hasLabel">
+		<p class="progress-bar__text progress-bar__text--occasional">
+			Casual
+			<app-pin [class]=" 'progress-bar__pin' "></app-pin>
+		</p>
+		<p [ngClass]="{ 'progress-bar__text--disabled' : progressBarValue < competitiveValue }"
+			 class="progress-bar__text progress-bar__text--competitive ">
+			Competitivo
+			<app-pin [isDisabled]="progressBarValue < competitiveValue"
+							 [class]=" 'progress-bar__pin' "></app-pin>
+		</p>
+	</ng-container>
 
-<progress class="progress-bar"
-					max="100"
-					value="50">
-</progress>
+	<progress class="progress-bar"
+						max="100"
+						[value]="progressBarValue && progressBarValue">
+	</progress>
 
-<ng-container *ngIf="hasLabel">
-	<p class="progress-bar__text progress-bar__text--amateur">
-		Amador
-		<app-pin [class]=" 'progress-bar__pin' "></app-pin>
-	</p>
-	<p class="progress-bar__text progress-bar__text--professional">
-		Pro
-		<app-pin [class]=" 'progress-bar__pin' "></app-pin>
-	</p>
-</ng-container>
+	<ng-container *ngIf="hasLabel">
+		<p [ngClass]="{ 'progress-bar__text--disabled' : progressBarValue < amateurValue }"
+			 class="progress-bar__text progress-bar__text--amateur">
+			Amador
+			<app-pin [isDisabled]="progressBarValue < amateurValue"
+							 [class]=" 'progress-bar__pin progress-bar__pin--disabled' "></app-pin>
+		</p>
+		<p [ngClass]="{ 'progress-bar__text--disabled' : progressBarValue < proValue }"
+			 class="progress-bar__text progress-bar__text--professional">
+			Pro
+			<app-pin [isDisabled]="progressBarValue < proValue"
+							 [class]=" 'progress-bar__pin' "></app-pin>
+		</p>
+	</ng-container>
+</div>

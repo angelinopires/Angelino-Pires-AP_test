@@ -1,0 +1,21 @@
+<div class="badges">
+	<img [src]="badges && badges.game_position.image"
+			 title="{{ badges && badges.game_position.title }}"
+			 alt="Posição do Jogador"
+			 class="badge">
+	<img [src]="badges && badges.featured_medal.image"
+			 title="{{ badges && badges.featured_medal.title }}"
+			 alt="Medalha do Jogador"
+			 class="badge">
+	<img [src]="badges && badges.patent"
+			 alt="Patente do Jogador"
+			 title="Sua patente"
+			 class="badge">
+	<span class="player__level"
+				title="Seu nível atual">{{ badges && badges.level }}</span>
+	<img *ngIf="badges && badges.is_subscriber"
+			 src="assets/img/premium-ii-medal.png"
+			 alt="Esta imagem representa uma insígnia de Premium"
+			 title="Você é um usuário Premium"
+			 class="badge">
+</div>
