@@ -11,14 +11,7 @@
 		</header>
 
 		<div class="dashboard__body">
-			<div class="room room--4fun">
-				<div class="room__header">
-					<i class="room__icon"></i>
-					<h3 class="room__title">Titulo 4fun aqui</h3>
-				</div>
-
-				<div class="carrousel">Carrousel aqui</div>
-			</div>
+			<app-fun-room [funLobby]="dashboard && dashboard['4fun']"></app-fun-room>
 
 			<div class="room room--lobby">
 				<div class="room__header">
