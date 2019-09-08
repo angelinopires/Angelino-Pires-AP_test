@@ -1,0 +1,80 @@
+.lobby {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+	align-content: space-between;
+	flex-wrap: wrap;
+  width: 160px;
+  height: 165px;
+  padding: 12px;
+  margin: 0 1rem 1rem 0;
+  word-break: break-all;
+  border: 1px solid #333548;
+  background-image: url(assets/img/lobby-map.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.5);
+
+  * {
+    z-index: 1;
+  }
+  &:before {
+    content: "";
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(229deg, rgba(39, 41, 64, 0.54) 0%, rgba(39, 41, 64, 0.91) 100%);
+    pointer-events: none;
+  }
+  &__header {
+    display: flex;
+
+    .btn {
+      &:first-child {
+        margin-right: 6px;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+  }
+  &__text {
+    @include txt-styles(12, $white);
+    font-family: $font-text;
+    font-weight: 500;
+    line-height: 16px;
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+  &__progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    width: 100%;
+  }
+  .fa-copy {
+    width: 16px;
+    height: 16px;
+    color: $white;
+    font-family: "Font Awesome 5 Free Regular";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  .fa-sign-in-alt {
+    width: 16px;
+    height: 16px;
+    color: $white;
+    font-family: "Font Awesome 5 Free Solid";
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

@@ -5,6 +5,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { PinComponent } from './pin/pin.component';
 import { BadgesComponent } from './badges/badges.component';
 import { PlayerProfileComponent } from './player-profile/player-profile.component';
+import { FunRoomComponent } from './fun-room/fun-room.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { PlayerProfileComponent } from './player-profile/player-profile.componen
 		PinComponent,
 		BadgesComponent,
 		PlayerProfileComponent,
+		FunRoomComponent,
 	],
   imports: [
     CommonModule
@@ -19,7 +21,8 @@ import { PlayerProfileComponent } from './player-profile/player-profile.componen
 	exports: [
 		ProgressBarComponent,
 		BadgesComponent,
-		PlayerProfileComponent
+		PlayerProfileComponent,
+		FunRoomComponent,
 	]
 })
 export class ComponentsModule { }

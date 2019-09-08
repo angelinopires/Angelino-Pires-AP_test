@@ -1,57 +1,75 @@
 .progress-bar {
   -webkit-appearance: none;
   appearance: none;
-  height: 14px;
-	width: 100%;
+  width: 100%;
 
-	&__text {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		font-family: $font-title;
-		@include txt-styles(17, $white);
+  &--player {
+    height: 14px;
 
-		&--occasional,
-		&--amateur {
-			.progress-bar__pin {
-				transform: rotate(180deg);
-			}
-		}
-		&--occasional {
-			top: 0;
-			left: calc(10% - 1rem);
-		}
-		&--competitive {
-			bottom: 0;
-			left: calc(30% - 1rem);
-		}
-		&--amateur {
-			top: 0;
-			left: calc(60% - 1rem);
-		}
-		&--professional {
-			bottom: 0;
-			left: calc(90% - 1rem);
-		}
-		&--disabled {
-			color: rgba(255, 255, 255, 0.3);
-		}
-	}
-	&__pin {
+    &::-webkit-progress-bar {
+      padding: 3px 3px 4px 3px;
+      border-radius: 7px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.41);
+      background-color: $bg-body;
+    }
+    &::-webkit-progress-value {
+      box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
+      border-radius: 7px;
+      background-color: rgba(255, 255, 255, 0.05);
+      background-image: linear-gradient(to right, $purple-heart 0%, $light-sky-blue 100%);
+    }
+  }
+  &--lobby {
+		height: 8px;
+		margin-top: 7px;
+
+    &::-webkit-progress-bar {
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    &::-webkit-progress-value {
+      border-radius: 4px;
+      background-color:  $blue-summer-sky;
+      background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+  &__text {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-family: $font-title;
+    @include txt-styles(17, $white);
+
+    &--occasional,
+    &--amateur {
+      .progress-bar__pin {
+        transform: rotate(180deg);
+      }
+    }
+    &--occasional {
+      top: 0;
+      left: calc(10% - 1rem);
+    }
+    &--competitive {
+      bottom: 0;
+      left: calc(30% - 1rem);
+    }
+    &--amateur {
+      top: 0;
+      left: calc(60% - 1rem);
+    }
+    &--professional {
+      bottom: 0;
+      left: calc(90% - 1rem);
+    }
+    &--disabled {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  &__pin {
     width: 15px;
     height: 18px;
-		margin-left: 4px;
-	}
-  &::-webkit-progress-bar {
-    padding: 3px 3px 4px 3px;
-    border-radius: 7px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.41);
-    background-color: $bg-body;
-  }
-  &::-webkit-progress-value {
-    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
-    border-radius: 7px;
-    background-color: rgba(255, 255, 255, 0.05);
-    background-image: linear-gradient(to right, $purple-heart 0%, $light-sky-blue 100%);
+    margin-left: 4px;
   }
 }

@@ -1,0 +1,36 @@
+<div class="room room--4fun">
+	<div class="room__header">
+		<img [src]="funLobby && funLobby.image"
+				 class="room__icon"
+				 alt="Ícone simbolizando alegria e diversão"
+				 title="Lobby para se divertir!">
+		<h3 class="room__title">{{ funLobby && funLobby.title }}</h3>
+	</div>
+
+	<div *ngIf="funLobby && funLobby.servers"
+			 class="room__lobbys">
+		<div *ngFor="let lobby of funLobby.servers"
+				 class="lobby">
+			<div class="lobby__header">
+				<button class="btn btn--copy">
+					<i class="far fa-copy"></i>
+				</button>
+				<button class="btn btn--sign-in">
+					<i class="fas fa-sign-in-alt"></i>
+				</button>
+			</div>
+
+			<div class="lobby__body">
+				<p class="lobby__text">#{{ lobby.id }} - {{ lobby.title}}</p>
+				<strong class="lobby__text lobby__text--bold">{{ lobby.mode }}</strong>
+			</div>
+
+			<div class="lobby__footer">
+				<p class="lobby__text">{{ lobby.map }}</p>
+				<p class="lobby__text">{{ lobby.current }}/{{ lobby.max}}</p>
+				<progress class="progress-bar progress-bar--lobby" [value]="getPercentage(lobby.current, lobby.max)"
+									max="100"></progress>
+			</div>
+		</div>
+	</div>
+</div>

@@ -3,10 +3,13 @@
 @import "./assets/scss/mixins";
 @import "./assets/scss/global";
 
+@import "./assets/scss/atoms/buttons.atoms";
+
+@import "./assets/scss/molecules/lobby.mol";
 @import "./assets/scss/molecules/progress-bar.mol";
 @import "./assets/scss/molecules/badges.mol";
 
-
 @import "./assets/scss/organisms/dashboard.org";
+@import "./assets/scss/organisms/room.org";
 @import "./assets/scss/organisms/player.org";
 
