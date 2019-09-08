@@ -9,26 +9,23 @@ import { LoadingService } from 'src/app/core/services/loading.service';
   styleUrls: ['./loading.component.scss']
 })
 export class LoadingComponent implements OnInit, OnDestroy {
-  @Input() isVisible = false;
-  @Input() isContainer = false;
-  isLoading = true;
+	private loadingSubscription: Subscription;
 
-  private loadingSubscription: Subscription;
+  isLoading: boolean = true;
 
   constructor(private loadingService: LoadingService) { }
 
   ngOnInit() {
-    this.loadingSubscription = this.loadingService.isLoading.subscribe(data => {
+		this.getLoading();
+	}
+
+	getLoading(): void {
+		this.loadingSubscription = this.loadingService.isLoading.subscribe(data => {
       this.isLoading = data;
-    }, error => {
-      console.log('error loadingSubscription', error);
-    })
-  }
+    });
+	}
 
   ngOnDestroy() {
-    if (this.loadingSubscription) {
-      this.loadingSubscription.unsubscribe();
-    }
+		this.loadingSubscription && this.loadingSubscription.unsubscribe();
   }
-
 }

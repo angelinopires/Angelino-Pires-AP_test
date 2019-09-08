@@ -1,8 +1,7 @@
 <main class="container">
 	<section class="dashboard">
 		<header class="dashboard__header">
-			<app-player-profile *ngIf="dashboard"
-													[profile]="dashboard.user"></app-player-profile>
+			<app-player-profile [profile]="dashboard && dashboard.user"></app-player-profile>
 
 			<app-progress-bar *ngIf="dashboard"
 												[expertise]="dashboard.user.expertise"

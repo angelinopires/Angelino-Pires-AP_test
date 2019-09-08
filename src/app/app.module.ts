@@ -4,11 +4,12 @@ import { registerLocaleData } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import localePt from '@angular/common/locales/pt';
 
-import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app.routing';
+import { CoreModule } from './core/core.module';
+import { PagesModule } from './pages/pages.module';
+import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
-import { PagesModule } from './pages/pages.module';
 
 registerLocaleData(localePt, 'pt');
 @NgModule({
@@ -19,6 +20,7 @@ registerLocaleData(localePt, 'pt');
 		AppRoutingModule,
 		RouterModule,
 		PagesModule,
+		SharedModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]

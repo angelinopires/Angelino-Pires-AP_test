@@ -11,7 +11,7 @@ import { PlayerProfileComponent } from './player-profile/player-profile.componen
 		ProgressBarComponent,
 		PinComponent,
 		BadgesComponent,
-		PlayerProfileComponent
+		PlayerProfileComponent,
 	],
   imports: [
     CommonModule

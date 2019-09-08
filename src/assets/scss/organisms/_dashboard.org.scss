@@ -1,10 +1,13 @@
 .dashboard {
   &__header {
-		padding-bottom: 1rem;
-		box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
+    padding-bottom: 1rem;
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
     border-radius: 2px 2px 0 0;
-    // background-color: #272940;
-    background-image: radial-gradient(circle 192px at 182.59% 87.1%, rgba(39, 41, 64, 0.36) 2%, #272940 99%),
-      radial-gradient(circle 249px at 182.59% 87.1%, rgba(191, 112, 216, 0.15) 0%, rgba(191, 112, 216, 0) 100%);
+    background-image: url(assets/img/header-background.png),
+      radial-gradient(circle 192px at 182.59% 87.1%, rgba(39, 41, 64, 0.36) 2%, #272940 99%),
+			radial-gradient(circle 249px at 182.59% 87.1%, rgba(191, 112, 216, 0.15) 0%, rgba(191, 112, 216, 0) 100%);
+		background-size: cover;
+		background-position: top;
+		background-repeat: no-repeat;
   }
 }

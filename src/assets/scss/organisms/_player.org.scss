@@ -28,6 +28,7 @@
     padding: 2rem 1rem;
     max-width: 350px;
     margin: 0 auto;
+    // background-image: url(assets/img/header-background.png);
   }
   &__level {
     @include txt-styles(19, $white);
