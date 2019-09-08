@@ -1,18 +1,14 @@
 import { Url } from 'url';
 
 import { CompetitiveRoomModel } from './CompetitiveRoomModel';
-import { FunRoomModel } from './FunRoomModel';
 import { UserModel } from './UserModel';
+import { FunModel } from './FunModel';
 
 export class DashboardModel {
 	online: number;
 	latest_banned: string;
 	user: UserModel;
-	'4fun': {
-		title: string;
-		image: Url;
-		servers: Array<FunRoomModel>;
-	}
+	'4fun': FunModel;
 	games: Array<CompetitiveRoomModel>;
 }
 

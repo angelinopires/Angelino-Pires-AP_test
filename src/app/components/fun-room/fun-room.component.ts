@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FunRoomModel } from 'src/app/core/models/FunRoomModel';
+import { FunModel } from 'src/app/core/models/FunModel';
 
 @Component({
   selector: 'app-fun-room',
@@ -7,7 +7,7 @@ import { FunRoomModel } from 'src/app/core/models/FunRoomModel';
   styleUrls: ['./fun-room.component.scss']
 })
 export class FunRoomComponent implements OnInit {
-	@Input() funLobby: FunRoomModel;
+	@Input() funLobby: FunModel;
 
   constructor() { }
 
