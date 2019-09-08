@@ -1,35 +1,14 @@
 <main class="container">
 	<section class="dashboard">
 		<header class="dashboard__header">
-			<div class="player__info">
-				<img class="player__image"
-						 src="assets/img/badfallen.jpg"
-						 alt="Foto do Bad Fallen AWP God">
-				<div class="player__name">
-					<h3 class="player__title">Bad Fallen is The Best Fallen IMO</h3>
-					<h4 class="player__title player__title--subtitle">GC ID: 23191420</h4>
-				</div>
-			</div>
+			<app-player-profile *ngIf="dashboard"
+													[profile]="dashboard.user"></app-player-profile>
 
-			<div class="player__expertise">
-				<app-progress-bar [hasLabel]=true></app-progress-bar>
-			</div>
+			<app-progress-bar *ngIf="dashboard"
+												[expertise]="dashboard.user.expertise"
+												[hasLabel]=true></app-progress-bar>
 
-			<div class="player__badges">
-				<img src="game_position"
-						 alt="Trazer texto da posicao do player aqui"
-						 class="player__position">
-				<img src="featured_medal"
-						 alt=""
-						 class="player__medal">
-				<img src="patent"
-						 alt="Patente aqui"
-						 class="player__patent">
-				<span class="player__level"></span>
-				<img src="is_subscriber"
-						 alt=""
-						 class="player__subscriber">
-			</div>
+			<app-badges [badges]="dashboard && dashboard.user"></app-badges>
 		</header>
 
 		<div class="dashboard__body">
