@@ -1,48 +1,10 @@
 .dashboard {
   &__header {
+		padding-bottom: 1rem;
 		box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
     border-radius: 2px 2px 0 0;
     // background-color: #272940;
     background-image: radial-gradient(circle 192px at 182.59% 87.1%, rgba(39, 41, 64, 0.36) 2%, #272940 99%),
       radial-gradient(circle 249px at 182.59% 87.1%, rgba(191, 112, 216, 0.15) 0%, rgba(191, 112, 216, 0) 100%);
   }
-}
-.player {
-	&__info {
-		display: flex;
-		align-items: center;
-		padding: 1rem;
-	}
-	&__image {
-		width: 100%;
-		max-width: 100px;
-		margin-right: .8rem;
-		border-radius: 50%;
-		border: 3px solid $color-cta;
-	}
-	&__title {
-		@include txt-styles(16, $white);
-		font-family: $font-text;
-		font-weight: 500;
-		line-height: 24px;
-
-		&--subtitle {
-		@include txt-styles(12, $id-color);
-			line-height: 16px;
-			text-transform: uppercase;
-		}
-	}
-	&__expertise {
-		position: relative;
-		padding: 2rem 1rem;
-	}
-
-	@media only screen and (min-width: $screen-tablet-landscape) {
-		&__info {
-			padding: 26px;
-		}
-		&__image {
-			max-width: 50px;
-		}
-	}
 }

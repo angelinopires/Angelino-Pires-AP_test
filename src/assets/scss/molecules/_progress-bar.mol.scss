@@ -7,6 +7,7 @@
 	&__text {
 		position: absolute;
 		display: flex;
+		align-items: center;
 		font-family: $font-title;
 		@include txt-styles(17, $white);
 
@@ -32,15 +33,14 @@
 			bottom: 0;
 			left: calc(90% - 1rem);
 		}
+		&--disabled {
+			color: rgba(255, 255, 255, 0.3);
+		}
 	}
 	&__pin {
-    display: block;
     width: 15px;
     height: 18px;
 		margin-left: 4px;
-		background-image: url(assets/img/pin.svg);
-    background-repeat: no-repeat;
-		background-position: center;
 	}
   &::-webkit-progress-bar {
     padding: 3px 3px 4px 3px;

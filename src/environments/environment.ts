@@ -6,8 +6,8 @@ export const environment = {
   production: false,
   mock: false,
 
-  url: 'https://api.myjson.com/bins/sqwaq',
-  api_url: 'https://api.myjson.com/bins/sqwaq'
+  url: 'https://api.myjson.com/bins/',
+  api_url: 'https://api.myjson.com/bins/'
 };
 
 /*

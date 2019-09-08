@@ -1,0 +1,58 @@
+.player {
+  &__info {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  &__image {
+    width: 100%;
+    max-width: 100px;
+    margin-right: 0.8rem;
+    border-radius: 50%;
+    border: 3px solid $color-cta;
+  }
+  &__title {
+    @include txt-styles(16, $white);
+    font-family: $font-text;
+    font-weight: 500;
+    line-height: 24px;
+
+    &--subtitle {
+      @include txt-styles(12, $id-color);
+      line-height: 16px;
+      text-transform: uppercase;
+    }
+  }
+  &__expertise {
+    position: relative;
+    padding: 2rem 1rem;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  &__level {
+    @include txt-styles(19, $white);
+    width: 45px;
+    height: 45px;
+    padding: 14px 0;
+    font-family: $font-text;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+  }
+
+  @media only screen and (min-width: $screen-tablet-landscape) {
+    &__info {
+      padding: 26px;
+    }
+    &__image {
+      max-width: 50px;
+    }
+    &__level {
+      width: 33px;
+      height: 33px;
+      padding: 8px 0;
+    }
+  }
+}

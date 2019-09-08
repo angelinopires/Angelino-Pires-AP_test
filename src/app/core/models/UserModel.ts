@@ -10,5 +10,5 @@ export class UserModel {
 	is_subscriber: boolean;
 	patent: Url;
 	game_position: BadgeModel;
-	feature_medal: BadgeModel;
+	featured_medal: BadgeModel;
 }

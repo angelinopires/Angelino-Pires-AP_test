@@ -12,9 +12,7 @@ import { PagesModule } from './pages/pages.module';
 
 registerLocaleData(localePt, 'pt');
 @NgModule({
-	declarations: [
-		AppComponent,
-	],
+	declarations: [AppComponent],
 	imports: [
 		CoreModule,
 		BrowserModule,
