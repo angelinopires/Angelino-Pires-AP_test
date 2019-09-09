@@ -1,5 +1,6 @@
 .room {
   padding: 1rem;
+  margin-bottom: 1.5rem;
   border: 1px solid #333548;
   border-radius: 2px;
   background-color: $bg-body;
@@ -7,7 +8,8 @@
 
   &--4fun {
     position: relative;
-    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
   }
   &__header {
     display: flex;
@@ -28,11 +30,19 @@
     height: 100%;
   }
   &__matches {
-		display: flex;
-		justify-content: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
   &__lobbys {
-    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media only screen and (min-width: $screen-mobile) {
+    &__lobbys {
+      justify-content: space-evenly;
+    }
   }
 }

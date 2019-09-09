@@ -7,8 +7,7 @@
 		<h3 class="room__title">{{ funLobby && funLobby.title }}</h3>
 	</div>
 
-	<div *ngIf="funLobby && funLobby.servers"
-			 class="room__lobbys">
+	<ng-container *ngIf="funLobby && funLobby.servers">
 		<app-carousel [lobbys]="funLobby.servers"></app-carousel>
-	</div>
+	</ng-container>
 </div>

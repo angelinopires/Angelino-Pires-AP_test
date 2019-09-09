@@ -1,13 +1,31 @@
 .dashboard {
   &__header {
-    padding-bottom: 1rem;
+    padding: 0 $padding-mobile 1rem $padding-mobile;
     box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
-    border-radius: 2px 2px 0 0;
-    background-image: url(assets/img/header-background.png),
-      radial-gradient(circle 192px at 182.59% 87.1%, rgba(39, 41, 64, 0.36) 2%, #272940 99%),
-			radial-gradient(circle 249px at 182.59% 87.1%, rgba(191, 112, 216, 0.15) 0%, rgba(191, 112, 216, 0) 100%);
+		border-radius: 2px 2px 0 0;
+
+		background-image: url(assets/img/header-bg.jpg);
+		position: relative;
+		overflow: hidden;
+		background-position: center;
 		background-size: cover;
-		background-position: top;
-		background-repeat: no-repeat;
-  }
+		// background-size: cover;
+		// background-position: top;
+		// background-repeat: no-repeat;
+
+		* {
+			z-index: 1;
+		}
+		&:before {
+			@extend %shadow-background;
+			background-image: linear-gradient(229deg, rgba(39, 41, 64, 0.54) 0%, rgba(39, 41, 64, 0.91) 100%);
+
+			// background-image: radial-gradient(circle 192px at 182.59% 87.1%, rgba(39, 41, 64, 0.36) 2%, #272940 99%),
+			// 	radial-gradient(circle 249px at 182.59% 87.1%, rgba(191, 112, 216, 0.15) 0%, rgba(191, 112, 216, 0) 100%);
+		}
+	}
+	&__body {
+		padding: 0 $padding-mobile;
+		margin: 2rem auto 0;
+	}
 }
