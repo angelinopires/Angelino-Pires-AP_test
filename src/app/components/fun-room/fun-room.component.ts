@@ -13,8 +13,4 @@ export class FunRoomComponent implements OnInit {
 
   ngOnInit() {
 	}
-
-	getPercentage(current: number, total: number): number {
-		return Number( ((current / total) * 100).toFixed());
-	}
 }
