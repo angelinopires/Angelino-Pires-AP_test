@@ -5,6 +5,10 @@
   background-color: $bg-body;
   box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.5);
 
+  &--4fun {
+    position: relative;
+    max-width: 500px;
+  }
   &__header {
     display: flex;
     align-items: center;
@@ -23,8 +27,12 @@
     width: 100%;
     height: 100%;
   }
+  &__matches {
+		display: flex;
+		justify-content: center;
+    align-items: center;
+  }
   &__lobbys {
-    display: flex;
-    flex-wrap: wrap;
+    max-width: 500px;
   }
 }

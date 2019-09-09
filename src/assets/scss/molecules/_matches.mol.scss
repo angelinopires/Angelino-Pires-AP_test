@@ -1,0 +1,33 @@
+.match {
+  &__info {
+		width: 100px;
+    height: 100px;
+		padding: 12px;
+		margin-right: 6px;
+    background-image: linear-gradient(180deg, rgba(238, 238, 238, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 2px;
+  }
+  &__amount,
+  &__label {
+    font-family: $font-title;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__amount {
+    @include txt-styles(37, $white);
+		line-height: 32px;
+
+		&.match__amount--warning {
+			color: $color-warning;
+		}
+		&.match__amount--success {
+			color: $color-success;
+		}
+		&.match__amount--danger {
+			color: $color-danger;
+		}
+  }
+  &__label {
+		@include txt-styles(17, $white);
+  }
+}

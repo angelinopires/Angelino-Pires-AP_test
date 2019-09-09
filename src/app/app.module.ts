@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -17,6 +18,7 @@ registerLocaleData(localePt, 'pt');
 	imports: [
 		CoreModule,
 		BrowserModule,
+		BrowserAnimationsModule,
 		AppRoutingModule,
 		RouterModule,
 		PagesModule,
