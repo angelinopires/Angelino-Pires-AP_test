@@ -1,0 +1,41 @@
+.server {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1rem;
+
+	&__info {
+		&.server__info--online {
+			margin-right: 1rem;
+
+			.server__title {
+				@include txt-styles(30, $blue-summer-sky);
+			}
+			.server__text--highlight {
+				color: $blue-summer-sky;
+			}
+		}
+		&.server__info--banned {
+			.server__title {
+				@include txt-styles(30, $red-cinnabar);
+			}
+			.server__text--highlight {
+				color: $red-cinnabar;
+			}
+		}
+	}
+	&__title {
+		font-family: $font-title;
+		font-weight: 400;
+		text-align: center;
+		line-height: 24px;
+	}
+	&__text {
+		@include txt-styles(12, $white);
+		font-family: $font-text;
+		font-weight: 400;
+		line-height: 14px;
+	}
+	@media only screen and (min-width: $screen-tablet) {
+		margin-bottom: 0;
+	}
+}

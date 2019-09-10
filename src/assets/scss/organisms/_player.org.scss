@@ -1,7 +1,8 @@
 .player {
   &__info {
     display: flex;
-    align-items: center;
+		align-items: center;
+		justify-content: center;
     padding: 1rem;
   }
   &__image {
@@ -42,7 +43,11 @@
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
   }
-
+	@media only screen and (min-width: $screen-tablet) {
+		&__expertise {
+			max-width: 500px;
+		}
+	}
   @media only screen and (min-width: $screen-tablet-landscape) {
     &__info {
       padding: 26px;

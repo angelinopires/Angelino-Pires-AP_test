@@ -5,55 +5,22 @@
 
 			<app-progress-bar *ngIf="dashboard"
 												[expertise]="dashboard.user.expertise"
-												[hasLabel]=true></app-progress-bar>
+												[hasLabel]=true>
+			</app-progress-bar>
 
 			<app-badges [badges]="dashboard && dashboard.user"></app-badges>
 		</header>
 
 		<div class="dashboard__body">
 			<app-fun-room [funLobby]="dashboard && dashboard['4fun']"></app-fun-room>
-
-			<ng-container *ngIf="dashboard && dashboard.games">
-				<div class="room"
-						 *ngFor="let game of dashboard.games">
-					<div class="room__header">
-						<img [src]="game.image"
-								 class="room__icon"
-								 alt="Ícone de lobby simbolizando partidas normais"
-								 title="Lobby">
-						<h3 class="room__title">{{ game.title }}</h3>
-					</div>
-
-					<div class="room__matches">
-						<div class="match__info">
-							<strong class="match__amount match__amount--warning">{{ game.matches }}</strong>
-							<p class="match__label">Partidas</p>
-						</div>
-						<div class="match__info">
-							<strong class="match__amount match__amount--success">{{ game.win }}</strong>
-							<p class="match__label">Vitórias</p>
-						</div>
-						<div class="match__info">
-							<strong class="match__amount match__amount--danger">{{ game.lose }}</strong>
-							<p class="match__label">Derrotas</p>
-						</div>
-					</div>
-
-					<div class="room__footer">
-						<button [ngClass]="{
-							'btn--lobby': game.title === 'Lobby',
-							'btn--ranked': game.title === 'Ranked Open'
-						}" class="btn btn--cta">{{ game.cta.title }}</button>
-					</div>
-				</div>
-			</ng-container>
+			<app-lobbys [games]="dashboard && dashboard.games"></app-lobbys>
 		</div>
 
 		<footer class="dashboard__footer">
-			<button class="btn btn--download">
-				<fa-icon [icon]="faDownload"></fa-icon>
-				Download Gamers Club Anti-Cheat
-			</button>
+			<app-button [modifiers]="['download']"
+									[text]=" 'Download Gamers Club Anti-Cheat' "
+									[iconName]="faDownload">
+			</app-button>
 
 			<div class="server">
 				<div class="server__info server__info--online">

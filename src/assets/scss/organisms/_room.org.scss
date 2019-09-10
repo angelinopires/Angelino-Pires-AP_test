@@ -42,10 +42,37 @@
 	&__footer {
 		text-align: center;
 	}
+	&__text {
+		@include txt-styles(14, $white);
+		font-family: $font-text;
+		font-weight: 400;
+	}
 
   @media only screen and (min-width: $screen-mobile) {
     &__lobbys {
       justify-content: space-evenly;
     }
-  }
+	}
+	@media only screen and (min-width: $screen-tablet) {
+		width: calc(50% - .5rem);
+
+		&:last-child {
+			margin-left: 1rem;
+		}
+		&.room--4fun {
+			width: 100%;
+			padding: 1rem 0;
+			margin-left: 0;
+
+			.room__header,
+			.room__lobbys {
+				justify-content: start;
+				max-width: 80%;
+				margin: 0 auto;
+			}
+			.room__header {
+				margin-bottom: 1rem;
+			}
+		}
+	}
 }

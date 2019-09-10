@@ -16,7 +16,6 @@ export class DashboardComponent implements OnInit, OnDestroy {
 	dashboard: DashboardModel
 
 	faDownload = faDownload;
-
 	constructor(private dashboardService: DashboardService) { }
 
 	ngOnInit() {

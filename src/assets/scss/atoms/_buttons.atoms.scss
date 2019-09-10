@@ -46,9 +46,15 @@
 		@include txt-styles(14, $download-text-color);
 		font-family: $font-text;
 		font-weight: 400;
+		width: 100%;
+		max-width: 290px;
 		padding: 8px;
 		border-radius: 3px;
 		background-color: rgba(255, 255, 255, 0.06);
+
+		.fa-download {
+			margin-right: 6px;
+		}
 	}
 	&:focus,
 	&:hover {
