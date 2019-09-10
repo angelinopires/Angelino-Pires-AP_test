@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import {faChevronLeft, faUsers } from '@fortawesome/free-solid-svg-icons';
+import {faChevronRight, faUsers, faSurprise, faDesktop } from '@fortawesome/free-solid-svg-icons';
 import { CompetitiveRoomModel } from 'src/app/core/models/CompetitiveRoomModel';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lobbys',
@@ -11,12 +12,17 @@ import { CompetitiveRoomModel } from 'src/app/core/models/CompetitiveRoomModel';
 export class LobbysComponent implements OnInit {
 	@Input() games: Array<CompetitiveRoomModel> = [];
 
-	faChevronLeft = faChevronLeft;
+	faChevronRight = faChevronRight;
 	faUsers = faUsers;
+	faSurprise = faSurprise;
+	faDesktop = faDesktop;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-  }
+	}
 
+	navigateTo(route: string): void {
+		this.router.navigate([route]);
+	}
 }

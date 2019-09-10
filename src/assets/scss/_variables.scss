@@ -4,6 +4,7 @@ $font-text: "Poppins", sans-serif;
 
 // Main Colors
 $white: #ffffff;
+$white-darker: rgba(255, 255, 255, 0.05);
 $blue-summer-sky: #2c97de;
 $yellow-old-gold: #ddbc39;
 $green-citrus: #95b200;
@@ -39,3 +40,5 @@ $screen-tablet: 768px;
 $screen-tablet-landscape: 992px;
 $screen-desktop: 1200px;
 $screen-desktop-lg: 1600px;
+
+$transition-default: all 200ms ease-in-out;

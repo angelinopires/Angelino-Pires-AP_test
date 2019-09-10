@@ -1,4 +1,5 @@
 .room {
+	width: 100%;
   padding: 1rem;
   margin-bottom: 1.5rem;
   border: 1px solid #333548;
@@ -6,11 +7,12 @@
   background-color: $bg-body;
   box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.5);
 
-  &--4fun {
-    position: relative;
+  &.room--4fun {
+		position: relative;
+		max-width: none;
     margin: 0 auto;
     margin-bottom: 1.5rem;
-  }
+	}
   &__header {
     display: flex;
     align-items: center;
@@ -32,20 +34,38 @@
   &__matches {
     display: flex;
     justify-content: center;
-    align-items: center;
+		align-items: center;
+
+		&--no-match {
+			flex-direction: column;
+		}
   }
   &__lobbys {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	&__list {
+		@extend %total-width;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	&__footer {
 		text-align: center;
+		margin-top: 1rem;
 	}
 	&__text {
 		@include txt-styles(14, $white);
 		font-family: $font-text;
 		font-weight: 400;
+		text-align: center;
+	}
+	.fa-surprise,
+	.fa-desktop {
+		font-size: 4rem;
+		margin-bottom: 1rem;
+		color: #a5a7c9;
 	}
 
   @media only screen and (min-width: $screen-mobile) {
@@ -55,6 +75,7 @@
 	}
 	@media only screen and (min-width: $screen-tablet) {
 		width: calc(50% - .5rem);
+		max-width: 320px;
 
 		&:last-child {
 			margin-left: 1rem;
@@ -73,6 +94,11 @@
 			.room__header {
 				margin-bottom: 1rem;
 			}
+		}
+	}
+	@media only screen and (min-width: $screen-tablet-landscape) {
+		&.room--4fun {
+			width: calc(100vw - #{$padding-mobile * 2});
 		}
 	}
 }
