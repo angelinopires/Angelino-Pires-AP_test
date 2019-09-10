@@ -1,0 +1,67 @@
+<ng-container *ngIf="games">
+	<div class="room"
+			 *ngFor="let game of games">
+		<div class="room__header">
+			<img [src]="game.image"
+					 class="room__icon"
+					 alt="Ícone de lobby simbolizando partidas normais"
+					 title="Lobby">
+			<h3 class="room__title">{{ game.title }}</h3>
+		</div>
+
+		<ng-container *ngIf="game.matches === 0; else noMatches">
+			<div class="room__matches">
+				<div class="match__info">
+					<strong class="match__amount match__amount--warning">{{ game.matches }}</strong>
+					<p class="match__label">Partidas</p>
+				</div>
+				<div class="match__info">
+					<strong class="match__amount match__amount--success">{{ game.win }}</strong>
+					<p class="match__label">Vitórias</p>
+				</div>
+				<div class="match__info">
+					<strong class="match__amount match__amount--danger">{{ game.lose }}</strong>
+					<p class="match__label">Derrotas</p>
+				</div>
+			</div>
+
+			<div class="room__footer">
+				<ng-container *ngIf="game.title === 'Lobby'; else ranked">
+					<app-button [modifiers]="['cta', 'lobby']"
+											[text]="game.cta.title"></app-button>
+				</ng-container>
+				<ng-template #ranked>
+					<app-button [modifiers]="['cta', 'ranked']"
+											[text]="game.cta.title"
+											[extraText]="game.cta.line"
+											[iconName]="faUsers"></app-button>
+				</ng-template>
+			</div>
+		</ng-container>
+
+		<ng-template #noMatches>
+			<ng-container *ngIf="game.title === 'Lobby'; else competitive">
+				<div class="room__matches">
+					<p class="room__text">Você ainda não jogou nenhuma partida competitiva.</p>
+				</div>
+				<div class="room__footer">
+					<app-button [modifiers]="['join']"
+											[text]=" 'Ir para o Lobby' "
+											[iconName]="faChevronLeft"></app-button>
+				</div>
+			</ng-container>
+
+			<ng-template #competitive>
+				<div class="room__matches">
+					<p class="room__text">Complete nosso <strong>tutorial</strong> e ganhe uma medalha exclusiva no seu
+						perfil!</p>
+				</div>
+				<div class="room__footer">
+					<app-button [modifiers]="['join']"
+											[text]=" 'Fazer Tutorial' "
+											[iconName]="faChevronLeft"></app-button>
+				</div>
+			</ng-template>
+		</ng-template>
+	</div>
+</ng-container>

@@ -9,6 +9,8 @@ import { BadgesComponent } from './badges/badges.component';
 import { PlayerProfileComponent } from './player-profile/player-profile.component';
 import { FunRoomComponent } from './fun-room/fun-room.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ButtonComponent } from './button/button.component';
+import { LobbysComponent } from './lobbys/lobbys.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 		PlayerProfileComponent,
 		FunRoomComponent,
 		CarouselComponent,
+		ButtonComponent,
+		LobbysComponent,
 	],
   imports: [
 		CommonModule,
@@ -29,6 +33,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 		PlayerProfileComponent,
 		FunRoomComponent,
 		CarouselComponent,
+		ButtonComponent,
+		LobbysComponent,
 	],
 	providers: []
 })

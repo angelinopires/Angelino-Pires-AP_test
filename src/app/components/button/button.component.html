@@ -1,0 +1,10 @@
+<button class="btn"
+				type="button"
+				[ngClass]="modifiersJoined"
+				(click)="clicked.emit()">
+	<ng-container *ngIf="iconName">
+		<fa-icon [icon]="iconName"></fa-icon>
+		{{ extraText && extraText }}
+	</ng-container>
+	{{ text && text }}
+</button>

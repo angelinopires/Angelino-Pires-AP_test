@@ -2,12 +2,12 @@
 	<div *ngFor="let lobby of lobbys"
 			 class="lobby">
 		<div class="lobby__header">
-			<button class="btn btn--copy">
-				<fa-icon [icon]="faCopy"></fa-icon>
-			</button>
-			<button class="btn btn--sign-in">
-				<fa-icon [icon]="faSignInAlt"></fa-icon>
-			</button>
+			<app-button [modifiers]="['copy']"
+									[iconName]="faCopy">
+			</app-button>
+			<app-button [modifiers]="['sign-in']"
+									[iconName]="faSignInAlt">
+			</app-button>
 		</div>
 
 		<div class="lobby__body">
@@ -20,7 +20,8 @@
 			<p class="lobby__text">{{ lobby.current }}/{{ lobby.max}}</p>
 			<progress class="progress-bar progress-bar--lobby"
 								[value]="getPercentage(lobby.current, lobby.max)"
-								max="100"></progress>
+								max="100">
+			</progress>
 		</div>
 	</div>
 </div>
