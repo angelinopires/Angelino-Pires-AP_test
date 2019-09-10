@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
 
 import { DashboardService } from 'src/app/core/services/dashboard.service';
@@ -13,6 +14,8 @@ import { DashboardModel } from 'src/app/core/models/DashboardModel';
 export class DashboardComponent implements OnInit, OnDestroy {
 	dashboardSubscription: Subscription
 	dashboard: DashboardModel
+
+	faDownload = faDownload;
 
 	constructor(private dashboardService: DashboardService) { }
 

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { PinComponent } from './pin/pin.component';
@@ -19,7 +20,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 		CarouselComponent,
 	],
   imports: [
-		CommonModule
+		CommonModule,
+		FontAwesomeModule
 	],
 	exports: [
 		ProgressBarComponent,

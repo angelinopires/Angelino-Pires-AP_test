@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { faCopy, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+
 import { FunRoomModel } from 'src/app/core/models/FunRoomModel';
 
 @Component({
@@ -9,6 +11,9 @@ import { FunRoomModel } from 'src/app/core/models/FunRoomModel';
 })
 export class CarouselComponent implements OnInit {
 	@Input() lobbys: FunRoomModel;
+
+	faCopy = faCopy;
+	faSignInAlt = faSignInAlt;
 
 	constructor() { }
 

@@ -53,21 +53,10 @@
     height: 8px;
     width: 100%;
   }
-  .fa-copy {
+	.fa-copy,
+	.fa-sign-in-alt {
     width: 16px;
     height: 16px;
     color: $white;
-    font-family: "Font Awesome 5 Free Regular";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-  }
-  .fa-sign-in-alt {
-    width: 16px;
-    height: 16px;
-    color: $white;
-    font-family: "Font Awesome 5 Free Solid";
-    font-size: 14px;
-    line-height: 16px;
   }
 }

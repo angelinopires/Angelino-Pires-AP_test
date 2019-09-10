@@ -23,7 +23,6 @@
 	}
 	&--cta {
 		@include txt-styles(20, $white);
-		outline: transparent;
 		width: 100%;
 		max-width: 280px;
 		height: 40px;
@@ -37,10 +36,22 @@
 	}
 	&--lobby {
 		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
-		background-color: #ddbc39;
+		background-color: $color-warning;
 	}
 	&--ranked {
 		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
-		background-color: #2c97de;
+		background-color: $blue-summer-sky;
+	}
+	&--download {
+		@include txt-styles(14, $download-text-color);
+		font-family: $font-text;
+		font-weight: 400;
+		padding: 8px;
+		border-radius: 3px;
+		background-color: rgba(255, 255, 255, 0.06);
+	}
+	&:focus,
+	&:hover {
+		outline: transparent;
 	}
 }

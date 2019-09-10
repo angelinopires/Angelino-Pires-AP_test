@@ -22,7 +22,7 @@ registerLocaleData(localePt, 'pt');
 		AppRoutingModule,
 		RouterModule,
 		PagesModule,
-		SharedModule,
+		SharedModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

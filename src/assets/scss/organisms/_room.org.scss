@@ -38,7 +38,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
+	}
+	&__footer {
+		text-align: center;
+	}
 
   @media only screen and (min-width: $screen-mobile) {
     &__lobbys {
