@@ -1,5 +1,45 @@
 <div class="room__lobbys">
-	<div *ngFor="let lobby of lobbys"
+	<drag-scroll #nav (indexChanged)="handle()">
+		<div *ngFor="let lobby of lobbys"
+				 drag-scroll-item>
+			<div class="lobby">
+				<div class="lobby__header">
+					<app-button [modifiers]="['copy']"
+											[iconName]="faCopy"
+											(clicked)="copyText(lobby.copy)">
+					</app-button>
+					<app-button [modifiers]="['sign-in']"
+											[iconName]="faSignInAlt"
+											(clicked)="navigateTo('externalRedirect', lobby.join)">
+					</app-button>
+				</div>
+
+				<div class="lobby__body">
+					<p class="lobby__text">#{{ lobby.id }} - {{ lobby.title}}</p>
+					<strong class="lobby__text lobby__text--bold">{{ lobby.mode }}</strong>
+				</div>
+
+				<div class="lobby__footer">
+					<p class="lobby__text">{{ lobby.map }}</p>
+					<p class="lobby__text">{{ lobby.current }}/{{ lobby.max}}</p>
+					<progress class="progress-bar progress-bar--lobby"
+										[value]="getPercentage(lobby.current, lobby.max)"
+										max="100">
+					</progress>
+				</div>
+			</div>
+		</div>
+	</drag-scroll>
+	<div class="lobby__buttons">
+		<app-button [modifiers]="['carousel']"
+								(clicked)="moveLeft()"
+								[disabled]="ds && ds.currIndex === 0"></app-button>
+		<app-button [modifiers]="['carousel']"
+								(clicked)="moveRight()"
+								[disabled]="maxIndex && ds.currIndex >= maxIndex"></app-button>
+	</div>
+
+	<!-- <div *ngFor="let lobby of lobbys"
 			 class="lobby">
 		<div class="lobby__header">
 			<app-button [modifiers]="['copy']"
@@ -25,5 +65,5 @@
 								max="100">
 			</progress>
 		</div>
-	</div>
+	</div> -->
 </div>

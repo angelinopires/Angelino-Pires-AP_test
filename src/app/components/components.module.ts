@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { DragScrollModule } from 'ngx-drag-scroll';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
@@ -27,7 +28,8 @@ import { ServerInfoComponent } from './server-info/server-info.component';
 	],
   imports: [
 		CommonModule,
-		FontAwesomeModule
+		FontAwesomeModule,
+		DragScrollModule
 	],
 	exports: [
 		ProgressBarComponent,

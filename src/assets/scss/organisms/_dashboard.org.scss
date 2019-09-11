@@ -3,9 +3,10 @@
 	&__body,
 	&__footer {
 		margin-bottom: 2rem;
+		position: relative;
 	}
   &__header {
-		position: relative;
+		// position: relative;
     padding: 0 $padding-mobile 1rem $padding-mobile;
     box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
 		border-radius: 2px 2px 0 0;

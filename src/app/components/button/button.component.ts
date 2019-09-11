@@ -10,6 +10,7 @@ export class ButtonComponent implements OnInit {
 	@Input() iconName: string = '';
 	@Input() text: string = '';
 	@Input() extraText: string = ''
+	@Input() disabled: boolean = false;
 	@Output() clicked = new EventEmitter();
 
   modifiersJoined: string = '';

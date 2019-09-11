@@ -1,4 +1,5 @@
 .room {
+	position: relative;
 	width: 100%;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -72,7 +73,6 @@
 	}
 	@media only screen and (min-width: $screen-tablet) {
 		width: calc(50% - .5rem);
-		max-width: 320px;
 
 		&:last-child {
 			margin-left: 1rem;
@@ -81,6 +81,7 @@
 			width: 100%;
 			padding: 1rem 0;
 			margin-left: 0;
+			width: calc(100vw - #{$padding-mobile * 2});
 
 			.room__header,
 			.room__lobbys {
@@ -105,16 +106,16 @@
 	}
 	@media only screen and (min-width: $screen-desktop) {
 		width: 100%;
+		max-width: 320px;
+		max-height: 230px;
 		margin: 0;
 		box-shadow: none;
+		border-bottom: none;
 
 		&.room--4fun {
 			width: 100%;
 			max-width: 550px;
 			padding: 1rem;
-			border-bottom: none;
-			max-height: 220px;
-			overflow: hidden;
 
 			.room__header,
 			.room__lobbys {

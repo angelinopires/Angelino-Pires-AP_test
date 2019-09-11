@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { faCopy, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { FunRoomModel } from 'src/app/core/models/FunRoomModel';
+import { DragScrollComponent } from 'ngx-drag-scroll';
 
 @Component({
 	selector: 'app-carousel',
@@ -11,7 +12,11 @@ import { FunRoomModel } from 'src/app/core/models/FunRoomModel';
 	styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
-	@Input() lobbys: FunRoomModel;
+	@ViewChild('nav', {read: DragScrollComponent}) ds: DragScrollComponent;
+	@Input() lobbys: FunRoomModel[];
+
+	lastIndex: number;
+	maxIndex: number;
 
 	faCopy = faCopy;
 	faSignInAlt = faSignInAlt;
@@ -19,6 +24,7 @@ export class CarouselComponent implements OnInit {
 	constructor(private router: Router) { }
 
 	ngOnInit() {
+		this.findCarouselMaxIndex();
 	}
 
 	getPercentage(current: number, total: number): number {
@@ -35,7 +41,7 @@ export class CarouselComponent implements OnInit {
 		this.router.navigate([route]);
 	}
 
-	copyText(text: string) {
+	copyText(text: string): void {
 		let selBox = document.createElement('textarea');
 		selBox.classList.add('invisible');
     selBox.value = text;
@@ -44,5 +50,30 @@ export class CarouselComponent implements OnInit {
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
+	}
+
+	findCarouselMaxIndex(): void {
+		if (this.lobbys) {
+			this.maxIndex = this.lobbys.length < 3 ? 0 : this.lobbys.length - 3;
+		}
+	}
+
+	moveLeft(): void {
+		this.ds.moveLeft();
+		this.saveIndex(this.ds.currIndex);
+  }
+
+  moveRight(): void {
+    this.ds.moveRight();
+		this.saveIndex(this.ds.currIndex);
+  }
+
+	saveIndex(index: number) {
+		this.lastIndex = index;
+	}
+
+	handle() {
+		console.log('cheguei no fim kkk', this.ds);
+
 	}
 }

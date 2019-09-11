@@ -1,6 +1,7 @@
 <button class="btn"
 				type="button"
 				[ngClass]="modifiersJoined"
+				[disabled]="disabled"
 				(click)="clicked.emit()">
 	<ng-container *ngIf="iconName">
 		<fa-icon [icon]="iconName"></fa-icon>

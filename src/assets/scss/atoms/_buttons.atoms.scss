@@ -77,6 +77,16 @@
 			margin-right: 6px;
 		}
 	}
+	&--carousel {
+		width: 27px;
+		height: 3px;
+		margin-right: 3px;
+		@include btn-styles(rgba($white, .44), $white);
+
+		&:disabled {
+			@include btn-styles(rgba($white, .2), $white);
+		}
+	}
 	&:focus,
 	&:hover {
 		outline: transparent;

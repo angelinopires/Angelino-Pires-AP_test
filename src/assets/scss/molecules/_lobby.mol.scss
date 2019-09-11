@@ -52,7 +52,12 @@
     appearance: none;
     height: 8px;
     width: 100%;
-  }
+	}
+	&__buttons {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+	}
 	.fa-copy,
 	.fa-sign-in-alt {
     width: 16px;
