@@ -3,10 +3,12 @@
 			 class="lobby">
 		<div class="lobby__header">
 			<app-button [modifiers]="['copy']"
-									[iconName]="faCopy">
+									[iconName]="faCopy"
+									(clicked)="copyText(lobby.copy)">
 			</app-button>
 			<app-button [modifiers]="['sign-in']"
-									[iconName]="faSignInAlt">
+									[iconName]="faSignInAlt"
+									(clicked)="navigateTo('externalRedirect', lobby.join)">
 			</app-button>
 		</div>
 
