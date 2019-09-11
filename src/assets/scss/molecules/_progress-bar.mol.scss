@@ -72,4 +72,23 @@
     height: 18px;
     margin-left: 4px;
 	}
+	@media only screen and (min-width: $screen-desktop) {
+		&--player {
+			width: 500px;
+		}
+		&__text {
+			&--occasional {
+				left: calc(12% - 1rem);
+			}
+			&--competive {
+				left: calc(42% - 1rem);
+			}
+			&--amateur {
+				left: calc(70% - 1rem);
+			}
+			&--professional {
+				left: calc(100% - 1rem);
+			}
+		}
+	}
 }

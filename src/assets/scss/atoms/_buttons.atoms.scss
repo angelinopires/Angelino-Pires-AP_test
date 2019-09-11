@@ -3,6 +3,14 @@
 	background-color: transparent;
 	transition:  $transition-default;
 
+	&__extra-text {
+		@include txt-styles(24, $white);
+		margin: 0 17px 0 6px;
+		padding-right: 17px;
+		line-height: 24px;
+		text-transform: uppercase;
+		border-right: 1px solid rgba($white, .7);
+	}
   &--copy {
 		@include btn-styles($white-darker, $white);
     width: 28px;

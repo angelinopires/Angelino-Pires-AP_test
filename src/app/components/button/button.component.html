@@ -4,7 +4,7 @@
 				(click)="clicked.emit()">
 	<ng-container *ngIf="iconName">
 		<fa-icon [icon]="iconName"></fa-icon>
-		{{ extraText && extraText }}
+		<span class="btn__extra-text" *ngIf="extraText">{{ extraText }}</span>
 	</ng-container>
 	{{ text && text }}
 </button>

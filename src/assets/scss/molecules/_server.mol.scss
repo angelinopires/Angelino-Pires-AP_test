@@ -4,6 +4,8 @@
 	margin-bottom: 1rem;
 
 	&__info {
+		text-align: center;
+
 		&.server__info--online {
 			margin-right: 1rem;
 
@@ -37,5 +39,15 @@
 	}
 	@media only screen and (min-width: $screen-tablet) {
 		margin-bottom: 0;
+	}
+	@media only screen and (min-width: $screen-desktop) {
+		&__info {
+			display: flex;
+			align-items: center;
+			text-align: left;
+		}
+		&__title {
+			margin: 3px 10px 0 0;
+		}
 	}
 }

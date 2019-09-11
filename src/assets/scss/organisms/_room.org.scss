@@ -2,7 +2,7 @@
 	width: 100%;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  border: 1px solid #333548;
+  border: 1px solid $border-color;
   border-radius: 2px;
   background-color: $bg-body;
   box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.5);
@@ -47,9 +47,6 @@
 	}
 	&__list {
 		@extend %total-width;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 	&__footer {
 		text-align: center;
@@ -95,10 +92,49 @@
 				margin-bottom: 1rem;
 			}
 		}
+		&__list {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 	@media only screen and (min-width: $screen-tablet-landscape) {
 		&.room--4fun {
 			width: calc(100vw - #{$padding-mobile * 2});
+		}
+	}
+	@media only screen and (min-width: $screen-desktop) {
+		width: 100%;
+		margin: 0;
+		box-shadow: none;
+
+		&.room--4fun {
+			width: 100%;
+			max-width: 550px;
+			padding: 1rem;
+			border-bottom: none;
+			max-height: 220px;
+			overflow: hidden;
+
+			.room__header,
+			.room__lobbys {
+				max-width: none;
+    		margin: 0;
+			}
+			.room__header {
+				margin-bottom: 1rem;
+			}
+		}
+		&__list {
+			width: 100%;
+			align-items: flex-start;
+		}
+		&__title {
+			margin-top: 7px;
+		}
+		&:last-child {
+			margin: 0;
+			border-right: none;
 		}
 	}
 }

@@ -2,3 +2,9 @@ html {
 	font-size: 16px;
 	background-color: $bg-body;
 }
+.container {
+	@media only screen and (min-width: $screen-desktop) {
+		display: flex;
+    height: 100vh;
+	}
+}

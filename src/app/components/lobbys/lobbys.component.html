@@ -29,13 +29,15 @@
 				<div class="room__footer">
 					<ng-container *ngIf="game.title === 'Lobby'; else ranked">
 						<app-button [modifiers]="['cta', 'lobby']"
-												[text]="game.cta.title"></app-button>
+												[text]="game.cta.title"
+												(clicked)="navigateTo('externalRedirect', game.cta.link)"></app-button>
 					</ng-container>
 					<ng-template #ranked>
 						<app-button [modifiers]="['cta', 'ranked']"
 												[text]="game.cta.title"
 												[extraText]="game.cta.line"
-												[iconName]="faUsers"></app-button>
+												[iconName]="faUsers"
+												(clicked)="navigateTo('externalRedirect', game.cta.link)"></app-button>
 					</ng-template>
 				</div>
 			</ng-container>

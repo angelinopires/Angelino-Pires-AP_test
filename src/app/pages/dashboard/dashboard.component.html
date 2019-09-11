@@ -25,14 +25,18 @@
 			<div class="server">
 				<div class="server__info server__info--online">
 					<h5 class="server__title">{{ dashboard && dashboard.online }}</h5>
-					<p class="server__text">Jogadores</p>
-					<p class="server__text server__text--highlight">Online</p>
+					<div class="">
+						<p class="server__text">Jogadores</p>
+						<p class="server__text server__text--highlight">Online</p>
+					</div>
 				</div>
 
 				<div class="server__info server__info--banned">
 					<h5 class="server__title">{{ dashboard && dashboard.latest_banned }}</h5>
-					<p class="server__text">Cheaters Banidos</p>
-					<p class="server__text server__text--highlight">Nos últimos 7 dias</p>
+					<div class="">
+						<p class="server__text">Cheaters Banidos</p>
+						<p class="server__text server__text--highlight">Nos últimos 7 dias</p>
+					</div>
 				</div>
 			</div>
 		</footer>

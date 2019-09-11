@@ -60,5 +60,19 @@
       height: 33px;
       padding: 8px 0;
     }
-  }
+	}
+	@media only screen and (min-width: $screen-desktop) {
+		&__info {
+			padding: 0;
+		}
+		&__expertise {
+
+		}
+		&__level {
+			width: 40px;
+			height: 40px;
+			padding: 11px;
+			margin-right: 6px;
+		}
+	}
 }

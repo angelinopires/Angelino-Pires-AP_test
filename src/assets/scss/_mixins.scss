@@ -16,13 +16,8 @@
 
   &:hover,
   &:focus {
-    background-color: darken($btn-color, 10%);
+    background-color: darken($btn-color, 15%);
     box-shadow: none;
   }
 }
 
-@mixin btn-outline-styles($btn-color, $font-color) {
-  border: solid 2px $btn-color;
-  color: $btn-color;
-  background-color: transparent;
-}

@@ -32,7 +32,7 @@
 		margin: 0 5vmin 2rem;
 		padding: 1rem;
 		background-color: $bg-footer;
-		border: 1px solid #333548;
+		border: 1px solid $border-color;
 		border-radius: 0 0 2px 2px;
 	}
 	@media only screen and (min-width: $screen-tablet) {
@@ -45,7 +45,32 @@
 			justify-content: space-between;
 		}
 	}
-	@media only screen and (min-width: $screen-tablet-landscape) {
+	@media only screen and (min-width: $screen-desktop) {
+		max-width: 1200px;
+		margin: auto;
+		box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.5);
+		border-radius: 2px;
+		border: 1px solid $border-color;
+		background-color: #27293c;
 
+		&__header,
+		&__body {
+			margin: 0;
+			padding: 0;
+		}
+		&__header {
+			z-index: 2;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem;
+		}
+		&__body {
+			flex-wrap: nowrap;
+		}
+		&__footer {
+			margin: 0;
+			padding: 10px 14px;
+		}
 	}
 }

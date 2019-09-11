@@ -9,7 +9,7 @@
   padding: 12px;
   margin: 0 1rem 1.5rem 0;
   word-break: break-all;
-  border: 1px solid #333548;
+  border: 1px solid $border-color;
   background-image: url(assets/img/lobby-map.jpg);
   background-position: center;
   background-size: cover;
@@ -58,5 +58,8 @@
     width: 16px;
     height: 16px;
     color: $white;
-  }
+	}
+	@media only screen and (min-width: $screen-desktop) {
+		margin: 0 14px 0 0;
+	}
 }
