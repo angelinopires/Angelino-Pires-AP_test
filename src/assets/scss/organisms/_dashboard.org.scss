@@ -18,7 +18,7 @@
 		}
 		&:before {
 			@extend %shadow-background;
-			background-image: linear-gradient(249deg, rgba(39, 41, 64, 0.54) -100%, rgba(39, 41, 64, 0.91) 10%);
+			background-image: linear-gradient(249deg, rgba(39, 41, 64, 0.54) -100%, rgba(39, 41, 64, 0.9) 10%);
 		}
 	}
 	&__body {
@@ -63,7 +63,8 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			padding: 1rem;
+			max-height: $header-height;
+			padding: 0 0 0 1rem;
 		}
 		&__body {
 			flex-wrap: nowrap;
@@ -71,6 +72,7 @@
 		&__footer {
 			margin: 0;
 			padding: 10px 14px;
+			border-width: 1px 0 0 0;
 		}
 	}
 }

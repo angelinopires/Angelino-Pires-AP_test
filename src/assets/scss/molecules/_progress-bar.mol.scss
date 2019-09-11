@@ -47,21 +47,25 @@
       .progress-bar__pin {
         transform: rotate(180deg);
       }
-    }
+		}
+		&--occasional,
+		&--amateur {
+			top: 5px;
+		}
+		&--competitive,
+		&--professional {
+			bottom: 5px;
+		}
     &--occasional {
-      top: 0;
       left: calc(8% - 1rem);
     }
     &--competitive {
-      bottom: 0;
       left: calc(28% - 1rem);
     }
     &--amateur {
-      top: 0;
       left: calc(58% - 1rem);
     }
     &--professional {
-      bottom: 0;
       left: calc(88% - 1rem);
     }
     &--disabled {
@@ -75,9 +79,17 @@
 	}
 	@media only screen and (min-width: $screen-desktop) {
 		&--player {
-			width: calc(500px - 2rem;);
+			width: calc(500px - 2rem);
 		}
 		&__text {
+			&--occasional,
+			&--amateur {
+				top: 8px;
+			}
+			&--competitive,
+			&--professional {
+				bottom: 3px;
+			}
 			&--occasional {
 				left: calc(11% - 1rem);
 			}

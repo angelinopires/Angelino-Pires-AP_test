@@ -13,9 +13,11 @@
 			 class="badge">
 	<span class="player__level"
 				title="Seu nível atual">{{ badges && badges.level }}</span>
-	<img *ngIf="badges && badges.is_subscriber"
-			 src="assets/img/premium-ii-medal.png"
-			 alt="Esta imagem representa uma insígnia de Premium"
-			 title="Você é um usuário Premium"
-			 class="badge badge--premium">
+	<div class="badge__background">
+		<img *ngIf="badges && badges.is_subscriber"
+				 src="assets/img/premium-ii-medal.png"
+				 alt="Esta imagem representa uma insígnia de Premium"
+				 title="Você é um usuário Premium"
+				 class="badge badge--premium">
+	</div>
 </div>

@@ -3,9 +3,19 @@ html {
 	background-color: $bg-body;
 }
 .container {
+	* {
+		z-index: 1;
+	}
+	&:before {
+		@extend %shadow-background;
+		background-image: linear-gradient(249deg, rgba(39, 41, 64, 0.54) -100%, rgba(39, 41, 64, 0.85) 10%);
+	}
 	@media only screen and (min-width: $screen-desktop) {
 		display: flex;
     height: 100vh;
+		background-image: url(assets/img/main-bg.jpg);
+		background-position: center;
+		background-size: cover;
 	}
 }
 .invisible {
