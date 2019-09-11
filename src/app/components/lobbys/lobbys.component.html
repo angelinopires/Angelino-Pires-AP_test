@@ -51,7 +51,8 @@
 					<div class="room__footer">
 						<app-button [modifiers]="['join']"
 												[text]=" 'Ir para o Lobby' "
-												[iconName]="faChevronRight"></app-button>
+												[iconName]="faChevronRight"
+												(clicked)="navigateTo('externalRedirect', game.cta.link)"></app-button>
 					</div>
 				</ng-container>
 
@@ -64,7 +65,8 @@
 					<div class="room__footer">
 						<app-button [modifiers]="['join']"
 												[text]=" 'Fazer Tutorial' "
-												[iconName]="faChevronRight"></app-button>
+												[iconName]="faChevronRight"
+												(clicked)="navigateTo('externalRedirect', game.cta.link)"></app-button>
 					</div>
 				</ng-template>
 			</ng-template>

@@ -19,26 +19,12 @@
 		<footer class="dashboard__footer">
 			<app-button [modifiers]="['download']"
 									[text]=" 'Download Gamers Club Anti-Cheat' "
-									[iconName]="faDownload">
+									[iconName]="faDownload"
+									(clicked)="navigateTo('externalRedirect', 'https://anticheat.gamersclub.com.br/')">
 			</app-button>
 
-			<div class="server">
-				<div class="server__info server__info--online">
-					<h5 class="server__title">{{ dashboard && dashboard.online }}</h5>
-					<div class="">
-						<p class="server__text">Jogadores</p>
-						<p class="server__text server__text--highlight">Online</p>
-					</div>
-				</div>
-
-				<div class="server__info server__info--banned">
-					<h5 class="server__title">{{ dashboard && dashboard.latest_banned }}</h5>
-					<div class="">
-						<p class="server__text">Cheaters Banidos</p>
-						<p class="server__text server__text--highlight">Nos últimos 7 dias</p>
-					</div>
-				</div>
-			</div>
+			<app-server-info [banned]="dashboard && dashboard.latest_banned"
+											 [playersOnline]="dashboard && dashboard.online"></app-server-info>
 		</footer>
 	</section>
 </main>

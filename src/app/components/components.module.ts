@@ -11,6 +11,7 @@ import { FunRoomComponent } from './fun-room/fun-room.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ButtonComponent } from './button/button.component';
 import { LobbysComponent } from './lobbys/lobbys.component';
+import { ServerInfoComponent } from './server-info/server-info.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LobbysComponent } from './lobbys/lobbys.component';
 		CarouselComponent,
 		ButtonComponent,
 		LobbysComponent,
+		ServerInfoComponent,
 	],
   imports: [
 		CommonModule,
@@ -35,6 +37,7 @@ import { LobbysComponent } from './lobbys/lobbys.component';
 		CarouselComponent,
 		ButtonComponent,
 		LobbysComponent,
+		ServerInfoComponent,
 	],
 	providers: []
 })

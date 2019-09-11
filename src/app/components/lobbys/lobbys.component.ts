@@ -23,9 +23,8 @@ export class LobbysComponent implements OnInit {
 	}
 
 	navigateTo(route: string, url?: string): void {
-		console.log(`recebi isso`, route, url);
 		if (url) {
-			console.log(`uhul entrei`);
+			console.log(route, url);
 
 			this.router.navigate([route, { externalUrl: url }]);
 			return;

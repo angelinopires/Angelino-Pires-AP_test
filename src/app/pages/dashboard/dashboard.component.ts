@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 
 import { DashboardService } from 'src/app/core/services/dashboard.service';
 import { DashboardModel } from 'src/app/core/models/DashboardModel';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-dashboard',
@@ -16,7 +17,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
 	dashboard: DashboardModel
 
 	faDownload = faDownload;
-	constructor(private dashboardService: DashboardService) { }
+	constructor(
+		private dashboardService: DashboardService,
+		private router: Router) { }
 
 	ngOnInit() {
 		this.getDashboard();
@@ -35,5 +38,15 @@ export class DashboardComponent implements OnInit, OnDestroy {
 				this.dashboard = data;
 			}
 		})
+	}
+
+	navigateTo(route: string, url?: string): void {
+		if (url) {
+			console.log(route, url);
+
+			this.router.navigate([route, { externalUrl: url }]);
+			return;
+		}
+		this.router.navigate([route]);
 	}
 }
