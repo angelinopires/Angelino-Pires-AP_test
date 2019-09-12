@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { faCopy, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
@@ -11,20 +11,23 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
 	templateUrl: './carousel.component.html',
 	styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent implements OnInit {
-	@ViewChild('nav', {read: DragScrollComponent}) ds: DragScrollComponent;
+export class CarouselComponent implements OnInit, AfterViewInit {
+	@ViewChild('nav', { read: DragScrollComponent }) ds: DragScrollComponent;
+	@ViewChild('lobbysId') lobbysId: ElementRef;
 	@Input() lobbys: FunRoomModel[];
 
 	lastIndex: number;
-	maxIndex: number;
+	maxIndex: number = 0;
 
 	faCopy = faCopy;
 	faSignInAlt = faSignInAlt;
 
 	constructor(private router: Router) { }
 
-	ngOnInit() {
-		this.findCarouselMaxIndex();
+	ngOnInit() {}
+
+	ngAfterViewInit() {
+		this.findMaxIndex();
 	}
 
 	getPercentage(current: number, total: number): number {
@@ -44,36 +47,27 @@ export class CarouselComponent implements OnInit {
 	copyText(text: string): void {
 		let selBox = document.createElement('textarea');
 		selBox.classList.add('invisible');
-    selBox.value = text;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
+		selBox.value = text;
+		document.body.appendChild(selBox);
+		selBox.focus();
+		selBox.select();
+		document.execCommand('copy');
+		document.body.removeChild(selBox);
 	}
 
-	findCarouselMaxIndex(): void {
+	findMaxIndex(): void {
 		if (this.lobbys) {
-			this.maxIndex = this.lobbys.length < 3 ? 0 : this.lobbys.length - 3;
+			const lobbysWidth = this.lobbysId.nativeElement.offsetWidth;
+			const max = this.lobbys.length - Number((lobbysWidth / 176).toFixed());
+			this.maxIndex =max;
 		}
 	}
 
 	moveLeft(): void {
 		this.ds.moveLeft();
-		this.saveIndex(this.ds.currIndex);
-  }
-
-  moveRight(): void {
-    this.ds.moveRight();
-		this.saveIndex(this.ds.currIndex);
-  }
-
-	saveIndex(index: number) {
-		this.lastIndex = index;
 	}
 
-	handle() {
-		console.log('cheguei no fim kkk', this.ds);
-
+	moveRight(): void {
+		this.ds.moveRight();
 	}
 }

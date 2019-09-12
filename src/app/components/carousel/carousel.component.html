@@ -1,6 +1,5 @@
-<div class="room__lobbys">
-	<drag-scroll #nav
-							 (indexChanged)="handle()">
+<div class="room__lobbys" #lobbysId>
+	<drag-scroll #nav>
 		<div *ngFor="let lobby of lobbys"
 				 drag-scroll-item>
 			<div class="lobby">
@@ -37,6 +36,6 @@
 								[disabled]="ds && ds.currIndex === 0"></app-button>
 		<app-button [modifiers]="['carousel']"
 								(clicked)="moveRight()"
-								[disabled]="maxIndex && ds.currIndex >= maxIndex"></app-button>
+								[disabled]="!!maxIndex && ds.currIndex >= maxIndex"></app-button>
 	</div>
 </div>
