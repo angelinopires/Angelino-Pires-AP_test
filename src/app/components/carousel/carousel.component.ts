@@ -36,8 +36,6 @@ export class CarouselComponent implements OnInit, AfterViewInit {
 
 	navigateTo(route: string, url?: string): void {
 		if (url) {
-			console.log(route, url);
-
 			this.router.navigate([route, { externalUrl: url }]);
 			return;
 		}

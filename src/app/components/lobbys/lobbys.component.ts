@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 import {faChevronRight, faUsers, faSurprise, faDesktop } from '@fortawesome/free-solid-svg-icons';
+
 import { CompetitiveRoomModel } from 'src/app/core/models/CompetitiveRoomModel';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lobbys',
@@ -24,8 +25,6 @@ export class LobbysComponent implements OnInit {
 
 	navigateTo(route: string, url?: string): void {
 		if (url) {
-			console.log(route, url);
-
 			this.router.navigate([route, { externalUrl: url }]);
 			return;
 		}

@@ -1,5 +1,3 @@
-import { Url } from 'url';
-
 import { CompetitiveRoomModel } from './CompetitiveRoomModel';
 import { UserModel } from './UserModel';
 import { FunModel } from './FunModel';

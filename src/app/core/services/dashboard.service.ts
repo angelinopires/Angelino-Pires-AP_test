@@ -26,7 +26,6 @@ export class DashboardService {
 				this.loadingService.hide();
 			}
 		}, error => {
-			console.log('Error no Get Dashboard');
 			this.loadingService.hide();
 		});
 	}
