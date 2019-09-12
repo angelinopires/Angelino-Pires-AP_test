@@ -26,7 +26,7 @@
 
 ## 🤯 Demo <a name ="demo"></a>
 
-I'm still trying to deploy it. Maybe on the next release 👀
+Check it out here: [Gamers Club](https://gamers-club-angelino.netlify.com/) 👀
 
 ## ✔️ Prerequisites <a name ="prerequisites"></a>
 
