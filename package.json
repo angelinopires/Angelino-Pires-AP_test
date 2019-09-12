@@ -1,5 +1,6 @@
 {
-  "name": "aptest",
+	"name": "aptest",
+	"main": "index.html",
   "version": "1.0.0",
   "scripts": {
     "dev": "ng serve --open",
